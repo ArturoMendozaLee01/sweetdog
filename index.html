@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sweet Dog – Clínica Veterinaria en Asunción</title>
+  <meta name="description" content="Clínica veterinaria Sweet Dog en Asunción, Paraguay. Consultas médicas, especialidades, odontología, oftalmología, análisis clínicos, peluquería canina, guardería, transporte especializado, pet shop y farmacia veterinaria." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#1E3A8A" />
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_PY" />
+  <meta property="og:site_name" content="Sweet Dog Clínica Veterinaria" />
+  <meta property="og:title" content="Sweet Dog – Clínica Veterinaria en Asunción" />
+  <meta property="og:description" content="Donde tu mascota es parte de la familia. Atención médica experta, especialidades, análisis clínicos, peluquería, guardería y pet shop en Av. Perú 235, Asunción." />
+  <meta property="og:image" content="./Logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sweet Dog – Clínica Veterinaria en Asunción" />
+  <meta name="twitter:description" content="Donde tu mascota es parte de la familia. Clínica veterinaria en Av. Perú 235, Asunción, Paraguay." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./icono.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./icono.ico" type="image/x-icon" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: { DEFAULT: '#1E3A8A', dark: '#172C6B', soft: '#E8EDF8' },
+            mint: { DEFAULT: '#10B981', dark: '#047857', soft: '#E7F8F1' },
+            gold: { DEFAULT: '#F59E0B', dark: '#D98A06' },
+            slate: { bg: '#F8FAFC' },
+            ink: '#0F172A',
+            muted: '#475569',
+          },
+          fontFamily: {
+            display: ['Nunito', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Datos estructurados Schema.org para SEO en Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VeterinaryCare",
+      "name": "Sweet Dog Clínica Veterinaria",
+      "description": "Clínica veterinaria y centro de cuidado de mascotas en Asunción, Paraguay. Consultas médicas, especialidades, odontología, oftalmología, análisis clínicos, peluquería, guardería y pet shop.",
+      "logo": "./Logo.png",
+      "image": "./hero.png",
+      "telephone": "+595981550665",
+      "hasMap": "https://maps.google.com/?q=Av.+Peru+235+Asuncion+Paraguay",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Perú 235 entre Río de Janeiro y José Berges",
+        "addressLocality": "Asunción",
+        "addressCountry": "PY"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "07:30",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "08:00",
+          "closes": "12:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/veterinariasweetdog",
+        "https://www.facebook.com/SweetDog.py"
+      ]
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    .hero-fade {
+      background: linear-gradient(
+        90deg,
+        #F8FAFC 0%,
+        rgba(248, 250, 252, 0.96) 32%,
+        rgba(248, 250, 252, 0.55) 55%,
+        rgba(248, 250, 252, 0) 75%
+      );
+    }
+    @media (max-width: 767px) {
+      .hero-fade {
+        background: linear-gradient(
+          180deg,
+          rgba(248, 250, 252, 0.15) 0%,
+          rgba(248, 250, 252, 0.9) 55%,
+          #F8FAFC 100%
+        );
+      }
+    }
+    [data-lucide] { stroke-width: 2; }
+    a, button, .touch-card { -webkit-tap-highlight-color: transparent; }
+    .touch-card.is-touched {
+      transform: translateY(-0.125rem);
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    }
+  </style>
+</head>
+<body class="bg-slate-bg font-sans text-ink" ontouchstart="">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-navy text-white shadow-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="#inicio" class="flex items-center gap-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 rounded-full" aria-label="Sweet Dog – Inicio">
+        <img
+          src="./Logo.png"
+          alt="Logo de Sweet Dog Clínica Veterinaria"
+          width="48"
+          height="48"
+          class="h-12 w-12 shrink-0 rounded-full bg-white object-contain p-0.5"
+        />
+        <span class="leading-tight text-white">
+          <span class="block font-display text-xl font-extrabold text-white">Sweet Dog</span>
+          <span class="block text-[11px] font-medium uppercase tracking-wider text-white">Clínica Veterinaria</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="inicio" class="relative isolate overflow-hidden">
+      <img
+        src="./hero.png"
+        alt="Veterinaria de Sweet Dog abrazando con cariño a un golden retriever en la clínica"
+        width="1376"
+        height="768"
+        fetchpriority="high"
+        decoding="async"
+        class="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]"
+      />
+      <div class="hero-fade absolute inset-0 -z-10" aria-hidden="true"></div>
+      <div class="mx-auto flex min-h-[560px] max-w-7xl items-end px-4 pb-14 pt-56 sm:px-6 md:min-h-[620px] md:items-center md:py-24">
+        <div class="max-w-xl">
+          <h1 class="text-balance font-display text-4xl font-black leading-[1.05] text-navy sm:text-5xl lg:text-6xl">
+            Donde tu mascota es parte de la familia
+          </h1>
+          <p class="mt-5 max-w-md text-pretty text-lg leading-relaxed text-muted">
+            Cuidamos de ellos con atención médica experta y amor.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a
+              href="#servicios"
+              class="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-navy ring-1 ring-navy/15 transition hover:ring-navy/40 active:ring-navy/40 focus:outline-none focus-visible:ring-4 focus-visible:ring-navy/25"
+            >
+              Ver servicios
+            </a>
+          </div>
+          <dl class="mt-10 grid max-w-md grid-cols-3 gap-4">
+            <div>
+              <dt class="text-xs text-muted">Pacientes felices</dt>
+              <dd class="font-display text-2xl font-extrabold text-navy">+5.000</dd>
+            </div>
+            <div class="flex flex-col items-center text-center">
+              <dt class="text-xs text-muted">Especialidades</dt>
+              <dd class="font-display text-2xl font-extrabold text-navy">9</dd>
+            </div>
+            <div>
+              <dt class="text-xs text-muted">Calificación</dt>
+              <dd class="flex items-center gap-1 font-display text-2xl font-extrabold text-navy">
+                4,9 <i data-lucide="star" class="h-4 w-4 fill-gold text-gold" aria-hidden="true"></i>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alliance banner -->
+    <section aria-labelledby="alianza-title" class="bg-navy py-16 text-white sm:py-20">
+      <div class="mx-auto flex max-w-5xl flex-col items-center gap-6 px-4 text-center sm:px-6">
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-mint-soft px-3 py-1 text-xs font-bold uppercase tracking-wide text-mint-dark">
+          <span class="h-1.5 w-1.5 rounded-full bg-mint" aria-hidden="true"></span> Alianza estratégica
+        </span>
+
+        <div class="flex flex-col items-center gap-3 sm:flex-row">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20">
+            <i data-lucide="shield-check" class="h-6 w-6 text-mint" aria-hidden="true"></i>
+          </span>
+          <h2 id="alianza-title" class="text-balance font-display text-3xl font-extrabold sm:text-4xl">
+            Sweet Dog <span class="text-mint">×</span> Medical Pröpet
+          </h2>
+        </div>
+
+        <p class="max-w-2xl text-pretty text-base leading-relaxed text-blue-100 sm:text-lg">
+          Atención médica veterinaria directa <strong class="font-semibold text-white">sin desembolso</strong> para afiliados. Consulta tu cobertura.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center">
+          <a
+            href="tel:+595976222300"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-navy transition hover:bg-mint-soft active:bg-mint-soft focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+          >
+            Consultar cobertura
+            <i data-lucide="phone" class="h-4 w-4" aria-hidden="true"></i>
+          </a>
+          <!-- Alternativa para redirigir a Instagram de Medical Pröpet:
+          <a
+            href="https://www.instagram.com/medicalpropet.py"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-navy transition hover:bg-mint-soft active:bg-mint-soft focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+          >
+            Consultar cobertura
+            <i data-lucide="arrow-up-right" class="h-4 w-4" aria-hidden="true"></i>
+          </a>
+          -->
+        </div>
+
+        <div class="mt-2 w-full max-w-[280px] sm:max-w-[320px] overflow-hidden rounded-2xl bg-white/10 p-1.5 shadow-lg ring-1 ring-white/15">
+          <img
+            src="./alianza.png"
+            alt="Alianza Sweet Dog y Medical Pröpet medicina prepaga para mascotas"
+            width="416"
+            height="518"
+            loading="lazy"
+            decoding="async"
+            class="block h-auto w-full rounded-xl object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services bento -->
+    <section id="servicios" aria-labelledby="servicios-title" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24">
+      <div class="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <div class="max-w-2xl">
+          <p class="text-base font-bold uppercase tracking-wider text-mint-dark sm:text-lg">Nuestros servicios</p>
+          <h2 id="servicios-title" class="mt-2 text-balance font-display text-3xl font-extrabold text-navy sm:text-4xl">
+            Todo lo que tu mascota necesita, en un solo lugar
+          </h2>
+        </div>
+        <p class="max-w-sm text-muted">
+          Medicina de calidad, estética y cuidado diario con un equipo que conoce a cada paciente por su nombre.
+        </p>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-3">
+        <!-- Consultas (featured) -->
+        <article class="group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-navy p-8 text-white md:col-span-2 md:row-span-1 md:items-center md:justify-center md:text-center">
+          <div class="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-mint/20 blur-2xl" aria-hidden="true"></div>
+          <div class="relative flex flex-col md:items-center">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-mint text-white">
+              <i data-lucide="stethoscope" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <h3 class="mt-6 font-display text-2xl font-extrabold">Consultas Médicas &amp; Especialidades</h3>
+            <p class="mt-2 max-w-lg text-blue-100 md:mx-auto">
+              Medicina general, vacunación y especialidades como <strong class="font-semibold text-white">Neurología</strong>, con seguimiento personalizado de cada paciente.
+            </p>
+          </div>
+          <div class="relative mt-6 flex flex-wrap justify-center gap-2">
+            <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/20">Neurología</span>
+            <span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/20">Vacunación</span>
+            <span class="inline-flex items-center gap-1.5 rounded-full bg-gold px-3 py-1 text-xs font-bold text-ink">
+              <i data-lucide="clock" class="h-3.5 w-3.5" aria-hidden="true"></i> Próximamente: Hospital 24/7
+            </span>
+          </div>
+        </article>
+
+        <!-- Análisis -->
+        <article class="touch-card flex flex-col rounded-3xl bg-white p-8 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-lg active:-translate-y-0.5 active:shadow-lg md:row-span-2">
+          <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-mint-soft text-mint-dark">
+            <i data-lucide="microscope" class="h-6 w-6" aria-hidden="true"></i>
+          </span>
+          <h3 class="mt-6 font-display text-xl font-extrabold text-navy">Análisis Clínicos &amp; Diagnóstico</h3>
+          <p class="mt-2 text-muted">Laboratorio propio con resultados rápidos para decisiones médicas a tiempo.</p>
+          <ul class="mt-6 space-y-3 text-sm text-ink">
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-mint" aria-hidden="true"></i>Hemogramas y bioquímica
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-mint" aria-hidden="true"></i>Ecografía y radiología
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-mint" aria-hidden="true"></i>Análisis de orina y heces
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i data-lucide="check-circle-2" class="h-4 w-4 shrink-0 text-mint" aria-hidden="true"></i>Test rápidos de enfermedades
+            </li>
+          </ul>
+          <div class="mt-auto pt-8">
+            <div class="rounded-2xl bg-slate-bg p-4">
+              <p class="text-xs text-muted">Tiempo promedio de resultados</p>
+              <p class="font-display text-2xl font-extrabold text-navy">&lt; 2 h</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Peluquería -->
+        <article class="touch-card rounded-3xl bg-white p-8 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-lg active:-translate-y-0.5 active:shadow-lg">
+          <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-mint-soft text-mint-dark">
+            <i data-lucide="scissors" class="h-6 w-6" aria-hidden="true"></i>
+          </span>
+          <h3 class="mt-6 font-display text-xl font-extrabold text-navy">Peluquería &amp; Estética Canina</h3>
+          <p class="mt-2 text-muted">Baños medicados, cortes de raza y cuidado de piel y pelaje.</p>
+        </article>
+
+        <!-- Guardería -->
+        <article class="touch-card rounded-3xl bg-mint-soft p-8 ring-1 ring-mint/20 transition hover:-translate-y-0.5 hover:shadow-lg active:-translate-y-0.5 active:shadow-lg">
+          <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-mint-dark">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 16V8a2 2 0 0 1 2-2h9.5a2 2 0 0 1 1.7.95L18.5 11H20a2 2 0 0 1 2 2v3h-3" />
+              <path d="M14 6v5h4.5" />
+              <path d="M9 16h6" />
+              <path d="M3 16h2" />
+              <circle cx="7" cy="16.5" r="2" />
+              <circle cx="17" cy="16.5" r="2" />
+            </svg>
+          </span>
+          <h3 class="mt-6 font-display text-xl font-extrabold text-navy">Guardería &amp; Transporte Especializado</h3>
+          <p class="mt-2 text-muted">Estadías seguras, traslados y viajes internacionales con documentación.</p>
+        </article>
+
+        <!-- Odontología & Oftalmología -->
+        <div class="grid gap-5 sm:grid-cols-2 md:col-span-3">
+          <!-- Odontología -->
+          <article class="touch-card rounded-3xl bg-white p-8 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-lg active:-translate-y-0.5 active:shadow-lg">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-mint-soft text-mint-dark">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7.5 3C5 3 3.5 5 3.5 7.5c0 2.1.7 3.8 1.4 5.8.6 1.8 1.2 4.1 1.7 6.1.3 1.1 1.2 1.6 2 1.6.9 0 1.4-.6 1.7-1.6l.8-2.9c.2-.6.5-.9.9-.9s.7.3.9.9l.8 2.9c.3 1 .8 1.6 1.7 1.6.8 0 1.7-.5 2-1.6.5-2 1.1-4.3 1.7-6.1.7-2 1.4-3.7 1.4-5.8C20.5 5 19 3 16.5 3c-1.4 0-2.6.6-3.5 1.2-.6.4-1.4.4-2 0C10.1 3.6 8.9 3 7.5 3Z" />
+              </svg>
+            </span>
+            <h3 class="mt-6 font-display text-xl font-extrabold text-navy">Odontología</h3>
+            <p class="mt-2 text-muted">Diagnóstico, prevención y tratamiento.</p>
+          </article>
+
+          <!-- Oftalmología -->
+          <article class="touch-card rounded-3xl bg-white p-8 ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-lg active:-translate-y-0.5 active:shadow-lg">
+            <span class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-mint-soft text-mint-dark">
+              <i data-lucide="glasses" class="h-6 w-6" aria-hidden="true"></i>
+            </span>
+            <h3 class="mt-6 font-display text-xl font-extrabold text-navy">Oftalmología</h3>
+            <p class="mt-2 text-muted">Diagnóstico, tratamiento y cirugía oftalmológica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pet shop & pharmacy -->
+    <section id="tienda" aria-labelledby="tienda-title" class="bg-white py-20 sm:py-24">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16">
+        <div class="relative">
+          <img
+            src="./shop.png"
+            alt="Estanterías de la tienda Sweet Dog con alimentos, accesorios y productos de farmacia veterinaria"
+            width="1376"
+            height="768"
+            loading="lazy"
+            decoding="async"
+            class="aspect-[4/3] w-full rounded-3xl object-cover"
+          />
+          <div class="absolute -bottom-5 left-5 right-5 flex items-center gap-3 rounded-2xl bg-white p-4 shadow-xl ring-1 ring-slate-200 sm:left-auto sm:right-6 sm:max-w-xs">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-navy text-white">
+              <i data-lucide="store" class="h-5 w-5" aria-hidden="true"></i>
+            </span>
+            <p class="text-sm">
+              <span class="block font-semibold text-navy">Abierto hoy</span>
+              <span class="block text-muted">Lun a Sáb 07:30 – 17:00</span>
+              <span class="block text-muted">Dom 08:00 – 12:00</span>
+            </p>
+          </div>
+        </div>
+        <div>
+          <p class="text-base font-bold uppercase tracking-wider text-mint-dark sm:text-lg">Pet Shop &amp; Farmacia</p>
+          <h2 id="tienda-title" class="mt-2 text-balance font-display text-3xl font-extrabold text-navy sm:text-4xl">
+            Alimentos, accesorios y farmacia veterinaria
+          </h2>
+          <p class="mt-4 text-muted">
+            Seleccionamos productos recomendados por nuestros veterinarios para cada etapa de vida de tu mascota.
+          </p>
+
+          <ul class="mt-8 grid gap-4 sm:grid-cols-3">
+            <li class="rounded-2xl bg-slate-bg p-5">
+              <div class="flex justify-center">
+                <i data-lucide="bone" class="h-6 w-6 text-mint-dark" aria-hidden="true"></i>
+              </div>
+              <p class="mt-3 font-semibold text-navy">Alimentos</p>
+              <p class="mt-1 text-sm text-muted">Pro Plan, Balanced y más</p>
+            </li>
+            <li class="rounded-2xl bg-slate-bg p-5">
+              <div class="flex justify-center">
+                <i data-lucide="shopping-bag" class="h-6 w-6 text-mint-dark" aria-hidden="true"></i>
+              </div>
+              <p class="mt-3 font-semibold text-navy">Accesorios</p>
+              <p class="mt-1 text-sm text-muted">Correas, camas y juguetes</p>
+            </li>
+            <li class="rounded-2xl bg-slate-bg p-5">
+              <div class="flex justify-center">
+                <i data-lucide="pill" class="h-6 w-6 text-mint-dark" aria-hidden="true"></i>
+              </div>
+              <p class="mt-3 font-semibold text-navy">Farmacia</p>
+              <p class="mt-1 text-sm text-muted">Antiparasitarios y medicación</p>
+            </li>
+          </ul>
+
+          <a
+            href="#ubicacion"
+            class="mt-8 flex items-start gap-3 rounded-2xl border border-dashed border-navy/30 bg-navy-soft p-4 text-sm text-navy transition hover:border-navy/60 hover:bg-navy/10 active:border-navy/60 active:bg-navy/10 focus:outline-none focus-visible:ring-4 focus-visible:ring-navy/20"
+          >
+            <i data-lucide="map-pin" class="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true"></i>
+            <span><strong class="block font-bold md:inline">Venta exclusiva en tienda física</strong> <span class="block md:inline">(Perú 235, Asunción).</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="nosotros" aria-labelledby="equipo-title" class="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-base font-bold uppercase tracking-wider text-mint-dark sm:text-lg">Nuestro equipo</p>
+        <h2 id="equipo-title" class="mt-2 text-balance font-display text-3xl font-extrabold text-navy sm:text-4xl">
+          Personas reales que cuidan de tu familia
+        </h2>
+        <p class="mt-4 text-muted">
+          Profesionales de Asunción, comprometidos con cada paciente que cruza nuestra puerta.
+        </p>
+      </div>
+
+      <div
+        id="teamCarousel"
+        class="relative mt-12"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Carrusel del equipo de Sweet Dog"
+      >
+        <div class="-mx-2 overflow-hidden py-2 md:-mx-3">
+          <ul id="teamTrack" class="flex transition-transform duration-700 ease-in-out">
+            <li class="w-full shrink-0 px-2 md:w-1/3 md:px-3">
+              <article class="h-full overflow-hidden rounded-3xl bg-white ring-1 ring-slate-200 shadow-sm">
+                <img
+                  src="./NayeliMendoza.jpeg"
+                  alt="Retrato de Nayeli Mendoza, Recepcionista de Sweet Dog"
+                  width="1003"
+                  height="1280"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full bg-white object-cover object-top"
+                />
+                <div class="p-6 text-center">
+                  <h3 class="font-display text-lg font-extrabold text-navy">Nayeli Mendoza</h3>
+                  <p class="mt-1 text-sm font-medium text-mint-dark">Recepcionista</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="w-full shrink-0 px-2 md:w-1/3 md:px-3">
+              <article class="h-full overflow-hidden rounded-3xl bg-white ring-1 ring-slate-200 shadow-sm">
+                <img
+                  src="./PatriciaJara.jpeg"
+                  alt="Retrato de Patricia Jara, Doctora y Veterinaria de Sweet Dog"
+                  width="947"
+                  height="1280"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full bg-white object-cover object-top"
+                />
+                <div class="p-6 text-center">
+                  <h3 class="font-display text-lg font-extrabold text-navy">Patricia Jara</h3>
+                  <p class="mt-1 text-sm font-medium text-mint-dark">Doctora y Veterinaria</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="w-full shrink-0 px-2 md:w-1/3 md:px-3">
+              <article class="h-full overflow-hidden rounded-3xl bg-white ring-1 ring-slate-200 shadow-sm">
+                <img
+                  src="./JoseVera.jpeg"
+                  alt="Retrato de José Vera, Peluquero y Bañador de Sweet Dog"
+                  width="894"
+                  height="1280"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full bg-white object-cover object-top"
+                />
+                <div class="p-6 text-center">
+                  <h3 class="font-display text-lg font-extrabold text-navy">José Vera</h3>
+                  <p class="mt-1 text-sm font-medium text-mint-dark">Peluquero y Bañador</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="w-full shrink-0 px-2 md:w-1/3 md:px-3">
+              <article class="h-full overflow-hidden rounded-3xl bg-white ring-1 ring-slate-200 shadow-sm">
+                <img
+                  src="./CrescenciaSamaniego.jpeg"
+                  alt="Retrato de Crescencia Samaniego, Peluquera y Bañadora de Sweet Dog"
+                  width="900"
+                  height="1280"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full bg-white object-cover object-top"
+                />
+                <div class="p-6 text-center">
+                  <h3 class="font-display text-lg font-extrabold text-navy">Crescencia Samaniego</h3>
+                  <p class="mt-1 text-sm font-medium text-mint-dark">Peluquera y Bañadora</p>
+                </div>
+              </article>
+            </li>
+
+            <li class="w-full shrink-0 px-2 md:w-1/3 md:px-3">
+              <article class="h-full overflow-hidden rounded-3xl bg-white ring-1 ring-slate-200 shadow-sm">
+                <img
+                  src="./HectorOrtiz.jpeg"
+                  alt="Retrato de Hector Ortiz, Chofer de Sweet Dog"
+                  width="949"
+                  height="1280"
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[4/5] w-full bg-white object-cover object-top"
+                />
+                <div class="p-6 text-center">
+                  <h3 class="font-display text-lg font-extrabold text-navy">Hector Ortiz</h3>
+                  <p class="mt-1 text-sm font-medium text-mint-dark">Chofer</p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Controles del carrusel -->
+        <div class="mt-8 flex items-center justify-center gap-4">
+          <button
+            id="teamPrev"
+            type="button"
+            aria-label="Ver integrante anterior"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-sm ring-1 ring-slate-200 transition hover:bg-navy hover:text-white active:bg-navy active:text-white focus:outline-none focus-visible:ring-4 focus-visible:ring-navy/25"
+          >
+            <i data-lucide="chevron-left" class="h-5 w-5" aria-hidden="true"></i>
+          </button>
+
+          <div id="teamDots" class="flex items-center gap-2" role="tablist" aria-label="Seleccionar integrante del equipo"></div>
+
+          <button
+            id="teamNext"
+            type="button"
+            aria-label="Ver siguiente integrante"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-sm ring-1 ring-slate-200 transition hover:bg-navy hover:text-white active:bg-navy active:text-white focus:outline-none focus-visible:ring-4 focus-visible:ring-navy/25"
+          >
+            <i data-lucide="chevron-right" class="h-5 w-5" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section id="ubicacion" aria-labelledby="ubicacion-title" class="bg-navy py-20 text-white sm:py-24">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6">
+        <div class="mb-10 text-center">
+          <p class="text-base font-bold uppercase tracking-wider text-mint sm:text-lg">Ubicación</p>
+          <h2 id="ubicacion-title" class="mt-2 text-balance font-display text-3xl font-extrabold sm:text-4xl">
+            Encontrános en Asunción
+          </h2>
+        </div>
+
+        <div class="flex flex-col">
+          <a
+            href="https://maps.google.com/?q=Av.+Peru+235+Asuncion+Paraguay"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group relative block min-h-[340px] sm:min-h-[400px] w-full overflow-hidden rounded-3xl ring-1 ring-white/10"
+            aria-label="Abrir ubicación de Sweet Dog en Google Maps"
+          >
+            <img
+              src="./map.png"
+              alt="Mapa de ubicación de Sweet Dog en Av. Perú 235, Asunción, Paraguay"
+              width="1505"
+              height="847"
+              loading="lazy"
+              decoding="async"
+              class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 group-active:scale-105"
+            />
+            <span class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-full flex-col items-center">
+              <span class="rounded-xl bg-white px-3 py-1.5 text-xs font-bold text-navy shadow-lg">Sweet Dog</span>
+              <span class="mt-1 flex h-11 w-11 items-center justify-center rounded-full bg-navy text-white shadow-lg ring-4 ring-white">
+                <i data-lucide="paw-print" class="h-5 w-5" aria-hidden="true"></i>
+              </span>
+            </span>
+            <span class="absolute bottom-4 right-4 inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-semibold text-navy shadow-md">
+              Abrir en Google Maps <i data-lucide="external-link" class="h-3.5 w-3.5" aria-hidden="true"></i>
+            </span>
+          </a>
+
+          <div class="mt-6 grid gap-4 sm:grid-cols-2">
+            <div class="flex items-start gap-3 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+              <i data-lucide="map-pin" class="mt-0.5 h-5 w-5 shrink-0 text-mint" aria-hidden="true"></i>
+              <p class="text-sm text-blue-100">
+                Av. Perú 235 entre Río de Janeiro y José Berges, Asunción, Paraguay
+              </p>
+            </div>
+            <div class="flex items-start gap-3 rounded-2xl bg-white/5 p-5 ring-1 ring-white/10">
+              <i data-lucide="clock" class="mt-0.5 h-5 w-5 shrink-0 text-mint" aria-hidden="true"></i>
+              <p class="text-sm text-blue-100">
+                <strong class="font-semibold text-white">Lunes a Sábado:</strong> 07:30 a 17:00 hs<br />
+                <strong class="font-semibold text-white">Domingos:</strong> 08:00 a 12:00hs
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navy-dark text-blue-100">
+    <div class="mx-auto grid max-w-7xl grid-cols-2 gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
+      <div class="col-span-2">
+        <div class="flex items-center gap-3">
+          <img
+            src="./Logo.png"
+            alt="Logo de Sweet Dog"
+            width="44"
+            height="44"
+            loading="lazy"
+            decoding="async"
+            class="h-11 w-11 shrink-0 rounded-full bg-white object-contain p-0.5"
+          />
+          <span class="font-display text-xl font-extrabold text-white">Sweet Dog</span>
+        </div>
+        <p class="mt-4 max-w-sm text-sm">
+          Clínica veterinaria y centro de cuidado de mascotas en el corazón de Asunción.
+        </p>
+        <div class="mt-5 flex gap-3">
+          <a
+            href="https://www.instagram.com/veterinariasweetdog"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram de Sweet Dog"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-mint active:bg-mint"
+          >
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/SweetDog.py"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook de Sweet Dog"
+            class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-mint active:bg-mint"
+          >
+            <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+              <path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.4V14h2.7v8h3.4z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-white">Navegación</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a class="hover:text-white active:text-white" href="#servicios">Servicios</a></li>
+          <li><a class="hover:text-white active:text-white" href="#nosotros">Nosotros</a></li>
+          <li><a class="hover:text-white active:text-white" href="#tienda">Tienda Presencial</a></li>
+          <li><a class="hover:text-white active:text-white" href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-sm font-semibold text-white">Contacto</h2>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li>Av. Perú 235, Asunción</li>
+          <li><a class="hover:text-white active:text-white" href="tel:+595981550665">+595 981 550 665</a></li>
+          <!-- <li><a class="hover:text-white active:text-white" href="mailto:hola@sweetdog.com.py">hola@sweetdog.com.py</a></li> -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <p class="mx-auto max-w-7xl px-4 py-5 text-xs text-blue-200/80 sm:px-6 md:text-center">
+        © 2026 Sweet Dog Clínica Veterinaria. Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a
+    href="https://wa.me/595981550665"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chatear por WhatsApp con Sweet Dog"
+    class="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-mint px-4 py-3.5 font-semibold text-white shadow-xl shadow-mint/30 transition hover:bg-mint-dark active:bg-mint-dark sm:px-5"
+  >
+    <svg viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor" aria-hidden="true">
+      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.7-.4z" />
+    </svg>
+    <span class="hidden sm:inline">WhatsApp</span>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+
+      // Activar efecto hover en tarjetas al tocar en dispositivos móviles
+      document.querySelectorAll('.touch-card').forEach((card) => {
+        let touchTimer = null;
+        card.addEventListener('touchstart', () => {
+          if (touchTimer) window.clearTimeout(touchTimer);
+          card.classList.add('is-touched');
+        }, { passive: true });
+        const clearTouch = () => {
+          if (touchTimer) window.clearTimeout(touchTimer);
+          touchTimer = window.setTimeout(() => card.classList.remove('is-touched'), 280);
+        };
+        card.addEventListener('touchend', clearTouch, { passive: true });
+        card.addEventListener('touchcancel', clearTouch, { passive: true });
+      });
+
+      // Carrusel del equipo (3 fotos visibles en web, 1 en mobile; desplazamiento derecha -> izquierda)
+      const carousel = document.getElementById('teamCarousel');
+      const track = document.getElementById('teamTrack');
+      const prevBtn = document.getElementById('teamPrev');
+      const nextBtn = document.getElementById('teamNext');
+      const dotsContainer = document.getElementById('teamDots');
+
+      if (!carousel || !track) return;
+
+      const originalSlides = Array.from(track.children);
+      const total = originalSlides.length;
+      const cloneCount = 3;
+
+      // Clonar los primeros 3 elementos al final para lograr un bucle infinito suave de derecha a izquierda
+      for (let i = 0; i < cloneCount; i++) {
+        const clone = originalSlides[i].cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      }
+
+      let currentIndex = 0;
+      let isAnimating = false;
+      let animFallbackTimer = null;
+      let autoPlayTimer = null;
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const getVisibleCount = () => (window.innerWidth >= 768 ? 3 : 1);
+
+      function clearAnimLock() {
+        if (animFallbackTimer) {
+          window.clearTimeout(animFallbackTimer);
+          animFallbackTimer = null;
+        }
+        isAnimating = false;
+      }
+
+      function armAnimLock() {
+        isAnimating = true;
+        if (animFallbackTimer) window.clearTimeout(animFallbackTimer);
+        animFallbackTimer = window.setTimeout(() => {
+          if (currentIndex >= total) {
+            currentIndex = currentIndex % total;
+            applyTransform(false);
+          }
+          clearAnimLock();
+        }, 800);
+      }
+
+      // Crear indicadores de paginación
+      const dots = originalSlides.map((_, idx) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', `Ir al integrante ${idx + 1}`);
+        dot.className = 'h-2.5 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-navy';
+        dot.addEventListener('click', () => {
+          goToSlide(idx);
+          restartAutoPlay();
+        });
+        dotsContainer.appendChild(dot);
+        return dot;
+      });
+
+      function updateDots() {
+        const active = ((currentIndex % total) + total) % total;
+        dots.forEach((dot, idx) => {
+          const isActive = idx === active;
+          dot.setAttribute('aria-selected', String(isActive));
+          dot.className = isActive
+            ? 'h-2.5 w-7 rounded-full bg-navy transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-navy'
+            : 'h-2.5 w-2.5 rounded-full bg-slate-300 transition-all duration-300 hover:bg-navy/50 active:bg-navy/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-navy';
+        });
+      }
+
+      function applyTransform(withTransition = true) {
+        const stepPercent = 100 / getVisibleCount();
+        track.style.transition = withTransition ? 'transform 700ms ease-in-out' : 'none';
+        track.style.transform = `translateX(-${currentIndex * stepPercent}%)`;
+        updateDots();
+      }
+
+      function goToSlide(index) {
+        if (isAnimating || index === currentIndex) return;
+        armAnimLock();
+        currentIndex = index;
+        applyTransform(true);
+      }
+
+      function nextSlide() {
+        if (isAnimating) return;
+        armAnimLock();
+        currentIndex += 1;
+        applyTransform(true);
+      }
+
+      function prevSlide() {
+        if (isAnimating) return;
+        armAnimLock();
+        if (currentIndex === 0) {
+          currentIndex = total;
+          applyTransform(false);
+          // Forzar reflow antes de animar hacia atrás
+          void track.offsetWidth;
+        }
+        currentIndex -= 1;
+        applyTransform(true);
+      }
+
+      track.addEventListener('transitionend', (e) => {
+        if (e.target !== track) return;
+        if (currentIndex >= total) {
+          currentIndex = currentIndex % total;
+          applyTransform(false);
+        }
+        clearAnimLock();
+      });
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          stopAutoPlay();
+          clearAnimLock();
+        } else {
+          if (currentIndex >= total) {
+            currentIndex = currentIndex % total;
+            applyTransform(false);
+          }
+          startAutoPlay();
+        }
+      });
+
+      function startAutoPlay() {
+        if (prefersReducedMotion) return;
+        stopAutoPlay();
+        autoPlayTimer = window.setInterval(nextSlide, 1750);
+      }
+
+      function stopAutoPlay() {
+        if (autoPlayTimer) {
+          window.clearInterval(autoPlayTimer);
+          autoPlayTimer = null;
+        }
+      }
+
+      function restartAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+      }
+
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        restartAutoPlay();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        restartAutoPlay();
+      });
+
+      carousel.addEventListener('mouseenter', stopAutoPlay);
+      carousel.addEventListener('mouseleave', startAutoPlay);
+      carousel.addEventListener('focusin', stopAutoPlay);
+      carousel.addEventListener('focusout', startAutoPlay);
+
+      // Soporte táctil (swipe) para dispositivos móviles
+      let touchStartX = 0;
+      carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].clientX;
+        stopAutoPlay();
+      }, { passive: true });
+
+      carousel.addEventListener('touchend', (e) => {
+        const deltaX = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(deltaX) > 40) {
+          if (deltaX < 0) nextSlide();
+          else prevSlide();
+        }
+        startAutoPlay();
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        applyTransform(false);
+      });
+
+      applyTransform(false);
+      startAutoPlay();
+    });
+  </script>
+</body>
+</html>
